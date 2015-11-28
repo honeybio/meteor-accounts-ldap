@@ -104,6 +104,7 @@ UserQuery = (function() {
         console.log('User: ' + this.userObj.dn + ' not found.');
         groupsFuture["return"](false);
       } else {
+        console.log(JSON.stringify(groups))
         if (Meteor.settings.ldap.debug) {
           console.log('Groups found for ' + this.userObj.dn + ': ' + JSON.stringify(groups));
         }
